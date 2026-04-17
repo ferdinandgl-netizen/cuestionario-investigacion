@@ -3,18 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cuestionario de Investigación - Convivencia Virtual y Aprendizaje Colaborativo</title>
+    <title>Cuestionario de Investigación</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
         
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: 'Inter', sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             padding: 20px;
@@ -37,22 +33,10 @@
             text-align: center;
         }
         
-        .header h1 {
-            font-size: 1.8rem;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
+        .header h1 { font-size: 1.8rem; margin-bottom: 15px; font-weight: 700; }
+        .header p { opacity: 0.95; font-size: 1rem; max-width: 800px; margin: 0 auto; }
         
-        .header p {
-            opacity: 0.95;
-            font-size: 1rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .content {
-            padding: 40px;
-        }
+        .content { padding: 40px; }
         
         .intro {
             background: #f8f9fa;
@@ -62,20 +46,10 @@
             border-radius: 8px;
         }
         
-        .intro p {
-            color: #555;
-            margin-bottom: 10px;
-        }
+        .intro p { color: #555; margin-bottom: 10px; }
+        .intro p:last-child { margin-bottom: 0; font-weight: 600; color: #667eea; }
         
-        .intro p:last-child {
-            margin-bottom: 0;
-            font-weight: 600;
-            color: #667eea;
-        }
-        
-        .section {
-            margin-bottom: 40px;
-        }
+        .section { margin-bottom: 40px; }
         
         .section-title {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -108,10 +82,7 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
         
-        thead {
-            background: #4c51bf;
-            color: white;
-        }
+        thead { background: #4c51bf; color: white; }
         
         th {
             padding: 15px 10px;
@@ -120,18 +91,9 @@
             font-size: 0.9rem;
         }
         
-        th:first-child {
-            width: 50px;
-        }
-        
-        th:nth-child(2) {
-            text-align: left;
-            padding-left: 20px;
-        }
-        
-        th:not(:first-child):not(:nth-child(2)) {
-            width: 60px;
-        }
+        th:first-child { width: 50px; }
+        th:nth-child(2) { text-align: left; padding-left: 20px; }
+        th:not(:first-child):not(:nth-child(2)) { width: 60px; }
         
         td {
             padding: 15px 10px;
@@ -146,17 +108,8 @@
             font-weight: 500;
         }
         
-        tr:hover {
-            background: #f7fafc;
-        }
-        
-        tr:last-child td {
-            border-bottom: none;
-        }
-        
-        .radio-cell {
-            position: relative;
-        }
+        tr:hover { background: #f7fafc; }
+        tr:last-child td { border-bottom: none; }
         
         input[type="radio"] {
             width: 20px;
@@ -172,11 +125,7 @@
             margin-bottom: 30px;
         }
         
-        .data-section h3 {
-            color: #4c51bf;
-            margin-bottom: 20px;
-            font-size: 1.2rem;
-        }
+        .data-section h3 { color: #4c51bf; margin-bottom: 20px; font-size: 1.2rem; }
         
         .form-group {
             margin-bottom: 15px;
@@ -192,15 +141,13 @@
             min-width: 200px;
         }
         
-        .form-group input[type="text"],
-        .form-group input[type="number"] {
+        .form-group input {
             flex: 1;
             min-width: 200px;
             padding: 10px 15px;
             border: 2px solid #e2e8f0;
             border-radius: 8px;
             font-size: 1rem;
-            transition: all 0.3s;
         }
         
         .form-group input:focus {
@@ -217,10 +164,7 @@
             margin-bottom: 30px;
         }
         
-        .scale-info h4 {
-            color: #d97706;
-            margin-bottom: 10px;
-        }
+        .scale-info h4 { color: #d97706; margin-bottom: 10px; }
         
         .scale-grid {
             display: grid;
@@ -255,7 +199,7 @@
             cursor: pointer;
             display: block;
             margin: 40px auto 0;
-            transition: transform 0.3s, box-shadow 0.3s;
+            transition: all 0.3s;
         }
         
         .submit-btn:hover:not(:disabled) {
@@ -312,22 +256,10 @@
         }
         
         @media (max-width: 768px) {
-            .content {
-                padding: 20px;
-            }
-            
-            th, td {
-                padding: 10px 5px;
-                font-size: 0.85rem;
-            }
-            
-            td:nth-child(2) {
-                padding-left: 10px;
-            }
-            
-            .scale-grid {
-                grid-template-columns: 1fr;
-            }
+            .content { padding: 20px; }
+            th, td { padding: 10px 5px; font-size: 0.85rem; }
+            td:nth-child(2) { padding-left: 10px; }
+            .scale-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -335,14 +267,14 @@
     <div class="container">
         <div class="header">
             <h1>Cuestionario de Investigación</h1>
-            <p>Relación entre la convivencia universitaria virtual (respeto y comunicación) y el aprendizaje colaborativo en estudiantes de [Carrera] de la [Universidad]</p>
+            <p>Relación entre la convivencia universitaria virtual (respeto y comunicación) y el aprendizaje colaborativo</p>
         </div>
         
         <div class="content">
             <div class="intro">
                 <p>Estimado/a estudiante:</p>
-                <p>La presente encuesta tiene como objetivo recopilar información para la investigación titulada. Tus respuestas son completamente <strong>anónimas y confidenciales</strong>, y serán utilizadas exclusivamente con fines académicos.</p>
-                <p>⚠️ No hay respuestas correctas o incorrectas, se solicita tu sinceridad respecto a lo que tú normalmente haces en tus equipos de trabajo.</p>
+                <p>Tus respuestas son completamente <strong>anónimas y confidenciales</strong>, y serán utilizadas exclusivamente con fines académicos.</p>
+                <p>⚠️ No hay respuestas correctas o incorrectas, se solicita tu sinceridad.</p>
             </div>
             
             <form id="cuestionario">
@@ -376,12 +308,7 @@
                 
                 <!-- SECCIÓN I -->
                 <div class="section">
-                    <div class="section-title">
-                        SECCIÓN I: CONVIVENCIA UNIVERSITARIA VIRTUAL
-                        <span style="display: block; font-size: 0.9rem; font-weight: 400; margin-top: 5px; opacity: 0.9;">
-                            (Respecto a mis interacciones con compañeros en entornos digitales como Zoom, Meet, Teams, WhatsApp, plataforma virtual, etc.)
-                        </span>
-                    </div>
+                    <div class="section-title">SECCIÓN I: CONVIVENCIA UNIVERSITARIA VIRTUAL</div>
                     
                     <div class="subsection">D1: RESPECTO VIRTUAL</div>
                     <table>
@@ -400,38 +327,38 @@
                             <tr>
                                 <td>1</td>
                                 <td>Respeto los turnos de palabra en videollamadas sin interrumpir a quien tiene el micrófono abierto.</td>
-                                <td class="radio-cell"><input type="radio" name="item1" value="1" required></td>
-                                <td class="radio-cell"><input type="radio" name="item1" value="2"></td>
-                                <td class="radio-cell"><input type="radio" name="item1" value="3"></td>
-                                <td class="radio-cell"><input type="radio" name="item1" value="4"></td>
-                                <td class="radio-cell"><input type="radio" name="item1" value="5"></td>
+                                <td><input type="radio" name="item1" value="1" required></td>
+                                <td><input type="radio" name="item1" value="2"></td>
+                                <td><input type="radio" name="item1" value="3"></td>
+                                <td><input type="radio" name="item1" value="4"></td>
+                                <td><input type="radio" name="item1" value="5"></td>
                             </tr>
                             <tr>
                                 <td>2</td>
                                 <td>Mantengo un tono cordial y respetuoso al escribir en los chats grupales de los equipos de trabajo.</td>
-                                <td class="radio-cell"><input type="radio" name="item2" value="1" required></td>
-                                <td class="radio-cell"><input type="radio" name="item2" value="2"></td>
-                                <td class="radio-cell"><input type="radio" name="item2" value="3"></td>
-                                <td class="radio-cell"><input type="radio" name="item2" value="4"></td>
-                                <td class="radio-cell"><input type="radio" name="item2" value="5"></td>
+                                <td><input type="radio" name="item2" value="1" required></td>
+                                <td><input type="radio" name="item2" value="2"></td>
+                                <td><input type="radio" name="item2" value="3"></td>
+                                <td><input type="radio" name="item2" value="4"></td>
+                                <td><input type="radio" name="item2" value="5"></td>
                             </tr>
                             <tr>
                                 <td>3</td>
                                 <td>Valoro las ideas y contribuciones de mis compañeros aunque no estemos cara a cara.</td>
-                                <td class="radio-cell"><input type="radio" name="item3" value="1" required></td>
-                                <td class="radio-cell"><input type="radio" name="item3" value="2"></td>
-                                <td class="radio-cell"><input type="radio" name="item3" value="3"></td>
-                                <td class="radio-cell"><input type="radio" name="item3" value="4"></td>
-                                <td class="radio-cell"><input type="radio" name="item3" value="5"></td>
+                                <td><input type="radio" name="item3" value="1" required></td>
+                                <td><input type="radio" name="item3" value="2"></td>
+                                <td><input type="radio" name="item3" value="3"></td>
+                                <td><input type="radio" name="item3" value="4"></td>
+                                <td><input type="radio" name="item3" value="5"></td>
                             </tr>
                             <tr>
                                 <td>4</td>
                                 <td>Me conecto puntualmente a las sesiones virtuales acordadas por el equipo de trabajo.</td>
-                                <td class="radio-cell"><input type="radio" name="item4" value="1" required></td>
-                                <td class="radio-cell"><input type="radio" name="item4" value="2"></td>
-                                <td class="radio-cell"><input type="radio" name="item4" value="3"></td>
-                                <td class="radio-cell"><input type="radio" name="item4" value="4"></td>
-                                <td class="radio-cell"><input type="radio" name="item4" value="5"></td>
+                                <td><input type="radio" name="item4" value="1" required></td>
+                                <td><input type="radio" name="item4" value="2"></td>
+                                <td><input type="radio" name="item4" value="3"></td>
+                                <td><input type="radio" name="item4" value="4"></td>
+                                <td><input type="radio" name="item4" value="5"></td>
                             </tr>
                         </tbody>
                     </table>
@@ -453,38 +380,38 @@
                             <tr>
                                 <td>5</td>
                                 <td>Redacto mensajes claros y comprensibles cuando doy instrucciones o explico ideas por escrito.</td>
-                                <td class="radio-cell"><input type="radio" name="item5" value="1" required></td>
-                                <td class="radio-cell"><input type="radio" name="item5" value="2"></td>
-                                <td class="radio-cell"><input type="radio" name="item5" value="3"></td>
-                                <td class="radio-cell"><input type="radio" name="item5" value="4"></td>
-                                <td class="radio-cell"><input type="radio" name="item5" value="5"></td>
+                                <td><input type="radio" name="item5" value="1" required></td>
+                                <td><input type="radio" name="item5" value="2"></td>
+                                <td><input type="radio" name="item5" value="3"></td>
+                                <td><input type="radio" name="item5" value="4"></td>
+                                <td><input type="radio" name="item5" value="5"></td>
                             </tr>
                             <tr>
                                 <td>6</td>
                                 <td>Utilizo adecuadamente las herramientas virtuales (micrófono, cámara, compartir pantalla) según lo requiera la situación.</td>
-                                <td class="radio-cell"><input type="radio" name="item6" value="1" required></td>
-                                <td class="radio-cell"><input type="radio" name="item6" value="2"></td>
-                                <td class="radio-cell"><input type="radio" name="item6" value="3"></td>
-                                <td class="radio-cell"><input type="radio" name="item6" value="4"></td>
-                                <td class="radio-cell"><input type="radio" name="item6" value="5"></td>
+                                <td><input type="radio" name="item6" value="1" required></td>
+                                <td><input type="radio" name="item6" value="2"></td>
+                                <td><input type="radio" name="item6" value="3"></td>
+                                <td><input type="radio" name="item6" value="4"></td>
+                                <td><input type="radio" name="item6" value="5"></td>
                             </tr>
                             <tr>
                                 <td>7</td>
                                 <td>Presto atención activa durante las videollamadas de trabajo (evito distracciones como redes sociales).</td>
-                                <td class="radio-cell"><input type="radio" name="item7" value="1" required></td>
-                                <td class="radio-cell"><input type="radio" name="item7" value="2"></td>
-                                <td class="radio-cell"><input type="radio" name="item7" value="3"></td>
-                                <td class="radio-cell"><input type="radio" name="item7" value="4"></td>
-                                <td class="radio-cell"><input type="radio" name="item7" value="5"></td>
+                                <td><input type="radio" name="item7" value="1" required></td>
+                                <td><input type="radio" name="item7" value="2"></td>
+                                <td><input type="radio" name="item7" value="3"></td>
+                                <td><input type="radio" name="item7" value="4"></td>
+                                <td><input type="radio" name="item7" value="5"></td>
                             </tr>
                             <tr>
                                 <td>8</td>
                                 <td>Cuando surge un malentendido digital, lo resuelvo mediante diálogo constructivo sin generar conflictos.</td>
-                                <td class="radio-cell"><input type="radio" name="item8" value="1" required></td>
-                                <td class="radio-cell"><input type="radio" name="item8" value="2"></td>
-                                <td class="radio-cell"><input type="radio" name="item8" value="3"></td>
-                                <td class="radio-cell"><input type="radio" name="item8" value="4"></td>
-                                <td class="radio-cell"><input type="radio" name="item8" value="5"></td>
+                                <td><input type="radio" name="item8" value="1" required></td>
+                                <td><input type="radio" name="item8" value="2"></td>
+                                <td><input type="radio" name="item8" value="3"></td>
+                                <td><input type="radio" name="item8" value="4"></td>
+                                <td><input type="radio" name="item8" value="5"></td>
                             </tr>
                         </tbody>
                     </table>
@@ -492,12 +419,7 @@
                 
                 <!-- SECCIÓN II -->
                 <div class="section">
-                    <div class="section-title">
-                        SECCIÓN II: APRENDIZAJE COLABORATIVO
-                        <span style="display: block; font-size: 0.9rem; font-weight: 400; margin-top: 5px; opacity: 0.9;">
-                            (Respecto al trabajo en equipo para la realización de tareas, proyectos o investigaciones académicas en el entorno virtual)
-                        </span>
-                    </div>
+                    <div class="section-title">SECCIÓN II: APRENDIZAJE COLABORATIVO</div>
                     
                     <div class="subsection">D3: INTERDEPENDENCIA EN EL EQUIPO</div>
                     <table>
@@ -516,29 +438,29 @@
                             <tr>
                                 <td>9</td>
                                 <td>Distribuyo equitativamente las tareas entre todos los miembros del equipo según sus habilidades.</td>
-                                <td class="radio-cell"><input type="radio" name="item9" value="1" required></td>
-                                <td class="radio-cell"><input type="radio" name="item9" value="2"></td>
-                                <td class="radio-cell"><input type="radio" name="item9" value="3"></td>
-                                <td class="radio-cell"><input type="radio" name="item9" value="4"></td>
-                                <td class="radio-cell"><input type="radio" name="item9" value="5"></td>
+                                <td><input type="radio" name="item9" value="1" required></td>
+                                <td><input type="radio" name="item9" value="2"></td>
+                                <td><input type="radio" name="item9" value="3"></td>
+                                <td><input type="radio" name="item9" value="4"></td>
+                                <td><input type="radio" name="item9" value="5"></td>
                             </tr>
                             <tr>
                                 <td>10</td>
                                 <td>Cumplo con las fechas de entrega y plazos que el grupo establece colectivamente.</td>
-                                <td class="radio-cell"><input type="radio" name="item10" value="1" required></td>
-                                <td class="radio-cell"><input type="radio" name="item10" value="2"></td>
-                                <td class="radio-cell"><input type="radio" name="item10" value="3"></td>
-                                <td class="radio-cell"><input type="radio" name="item10" value="4"></td>
-                                <td class="radio-cell"><input type="radio" name="item10" value="5"></td>
+                                <td><input type="radio" name="item10" value="1" required></td>
+                                <td><input type="radio" name="item10" value="2"></td>
+                                <td><input type="radio" name="item10" value="3"></td>
+                                <td><input type="radio" name="item10" value="4"></td>
+                                <td><input type="radio" name="item10" value="5"></td>
                             </tr>
                             <tr>
                                 <td>11</td>
                                 <td>Participo activamente en el trabajo sin dejar que un solo compañero haga todo el esfuerzo.</td>
-                                <td class="radio-cell"><input type="radio" name="item11" value="1" required></td>
-                                <td class="radio-cell"><input type="radio" name="item11" value="2"></td>
-                                <td class="radio-cell"><input type="radio" name="item11" value="3"></td>
-                                <td class="radio-cell"><input type="radio" name="item11" value="4"></td>
-                                <td class="radio-cell"><input type="radio" name="item11" value="5"></td>
+                                <td><input type="radio" name="item11" value="1" required></td>
+                                <td><input type="radio" name="item11" value="2"></td>
+                                <td><input type="radio" name="item11" value="3"></td>
+                                <td><input type="radio" name="item11" value="4"></td>
+                                <td><input type="radio" name="item11" value="5"></td>
                             </tr>
                         </tbody>
                     </table>
@@ -560,38 +482,38 @@
                             <tr>
                                 <td>12</td>
                                 <td>Comparto materiales de estudio, enlaces o fuentes de información con mis compañeros por medios digitales.</td>
-                                <td class="radio-cell"><input type="radio" name="item12" value="1" required></td>
-                                <td class="radio-cell"><input type="radio" name="item12" value="2"></td>
-                                <td class="radio-cell"><input type="radio" name="item12" value="3"></td>
-                                <td class="radio-cell"><input type="radio" name="item12" value="4"></td>
-                                <td class="radio-cell"><input type="radio" name="item12" value="5"></td>
+                                <td><input type="radio" name="item12" value="1" required></td>
+                                <td><input type="radio" name="item12" value="2"></td>
+                                <td><input type="radio" name="item12" value="3"></td>
+                                <td><input type="radio" name="item12" value="4"></td>
+                                <td><input type="radio" name="item12" value="5"></td>
                             </tr>
                             <tr>
                                 <td>13</td>
                                 <td>Explico conceptos o procedimientos a los compañeros cuando presentan dificultades durante las sesiones virtuales.</td>
-                                <td class="radio-cell"><input type="radio" name="item13" value="1" required></td>
-                                <td class="radio-cell"><input type="radio" name="item13" value="2"></td>
-                                <td class="radio-cell"><input type="radio" name="item13" value="3"></td>
-                                <td class="radio-cell"><input type="radio" name="item13" value="4"></td>
-                                <td class="radio-cell"><input type="radio" name="item13" value="5"></td>
+                                <td><input type="radio" name="item13" value="1" required></td>
+                                <td><input type="radio" name="item13" value="2"></td>
+                                <td><input type="radio" name="item13" value="3"></td>
+                                <td><input type="radio" name="item13" value="4"></td>
+                                <td><input type="radio" name="item13" value="5"></td>
                             </tr>
                             <tr>
                                 <td>14</td>
                                 <td>Integro y sintetizo las aportaciones de todos en el trabajo final del equipo.</td>
-                                <td class="radio-cell"><input type="radio" name="item14" value="1" required></td>
-                                <td class="radio-cell"><input type="radio" name="item14" value="2"></td>
-                                <td class="radio-cell"><input type="radio" name="item14" value="3"></td>
-                                <td class="radio-cell"><input type="radio" name="item14" value="4"></td>
-                                <td class="radio-cell"><input type="radio" name="item14" value="5"></td>
+                                <td><input type="radio" name="item14" value="1" required></td>
+                                <td><input type="radio" name="item14" value="2"></td>
+                                <td><input type="radio" name="item14" value="3"></td>
+                                <td><input type="radio" name="item14" value="4"></td>
+                                <td><input type="radio" name="item14" value="5"></td>
                             </tr>
                             <tr>
                                 <td>15</td>
                                 <td>Aplico en evaluaciones individuales los conocimientos que construimos colectivamente en el equipo.</td>
-                                <td class="radio-cell"><input type="radio" name="item15" value="1" required></td>
-                                <td class="radio-cell"><input type="radio" name="item15" value="2"></td>
-                                <td class="radio-cell"><input type="radio" name="item15" value="3"></td>
-                                <td class="radio-cell"><input type="radio" name="item15" value="4"></td>
-                                <td class="radio-cell"><input type="radio" name="item15" value="5"></td>
+                                <td><input type="radio" name="item15" value="1" required></td>
+                                <td><input type="radio" name="item15" value="2"></td>
+                                <td><input type="radio" name="item15" value="3"></td>
+                                <td><input type="radio" name="item15" value="4"></td>
+                                <td><input type="radio" name="item15" value="5"></td>
                             </tr>
                         </tbody>
                     </table>
@@ -611,16 +533,16 @@
                 
                 <div class="error-message" id="errorMessage">
                     <h3>❌ Error al enviar</h3>
-                    <p id="errorText">Hubo un problema al guardar tus respuestas. Por favor intenta nuevamente.</p>
+                    <p id="errorText">Hubo un problema al guardar tus respuestas. Intenta nuevamente.</p>
                 </div>
             </form>
         </div>
     </div>
     
     <script>
-        // ⚠️ REEMPLAZA ESTA URL CON TU URL DE GOOGLE APPS SCRIPT
-        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzIqOatojZ4OTnrkw4BW2EUZDjkq1gjkBzTq0tcrcbESx38KUg5xgrP4QHbMUgaTioP/exec';
-				        
+        // ⚠️ REEMPLAZA ESTA URL CON TU API DE SHEETDB
+        const SHEETDB_URL = 'https://sheetdb.io/api/v1/l57oedhs39m7f';
+        
         document.getElementById('cuestionario').addEventListener('submit', async function(e) {
             e.preventDefault();
             
@@ -640,6 +562,7 @@
             
             // Recopilar datos del formulario
             const formData = {
+                timestamp: new Date().toISOString(),
                 carrera: document.getElementById('carrera').value,
                 ciclo: document.getElementById('ciclo').value,
                 edad: document.getElementById('edad').value,
@@ -660,40 +583,43 @@
                 item15: document.querySelector('input[name="item15"]:checked')?.value || ''
             };
             
+            console.log('Enviando:', formData);
+            
             try {
-                // Enviar datos a Google Sheets
-                const response = await fetch(GOOGLE_SCRIPT_URL, {
+                const response = await fetch(SHEETDB_URL, {
                     method: 'POST',
-                    mode: 'no-cors', // Necesario para Google Apps Script
                     headers: {
-                        'Content-Type': 'application/json',
+                        'Content-Type': 'application/json'
                     },
-                    body: JSON.stringify(formData)
+                    body: JSON.stringify({ data: [formData] })
                 });
                 
-                // Ocultar loading
-                loading.style.display = 'none';
-                
-                // Mostrar mensaje de éxito
-                successMessage.style.display = 'block';
-                
-                // Resetear formulario
-                document.getElementById('cuestionario').reset();
-                
-                // Scroll al mensaje de éxito
-                successMessage.scrollIntoView({ behavior: 'smooth' });
+                if (response.ok) {
+                    loading.style.display = 'none';
+                    successMessage.style.display = 'block';
+                    document.getElementById('cuestionario').reset();
+                    successMessage.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                    throw new Error('Error HTTP: ' + response.status);
+                }
                 
             } catch (error) {
-                // Ocultar loading
+                console.error('Error:', error);
                 loading.style.display = 'none';
                 submitBtn.disabled = false;
-                
-                // Mostrar error
                 errorText.textContent = 'Error: ' + error.message;
                 errorMessage.style.display = 'block';
-                errorMessage.scrollIntoView({ behavior: 'smooth' });
             }
         });
+        
+        // Verificar URL configurada
+        if (SHEETDB_URL.includes('TU_API_KEY_AQUI')) {
+            console.error('⚠️ ERROR: Configura tu API key de SheetDB');
+            document.getElementById('submitBtn').addEventListener('click', function(e) {
+                e.preventDefault();
+                alert('⚠️ Por favor configura la URL de SheetDB en el código JavaScript');
+            });
+        }
     </script>
 </body>
 </html>
